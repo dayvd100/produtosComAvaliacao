@@ -5,6 +5,11 @@ app = FastAPI()
 
 
 @app.get("/")
+def home():
+    return "Home"
+
+
+@app.get("/produtos")
 async def retornar_valores():
     products = getting_products()
-    return {"products": products}
+    return products

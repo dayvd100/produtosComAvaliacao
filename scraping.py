@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 def getting_products():
     options = webdriver.ChromeOptions()
-    options.add_experimental_option("detach", True)
+    options.add_argument("--headless")
     browser = webdriver.Chrome(options=options)
 
     try:

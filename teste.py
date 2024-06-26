@@ -1,7 +1,7 @@
 import requests
 
-response = requests.get("http://127.0.0.1:8000/")
+response = requests.get("http://127.0.0.1:8000/produtos")
 
-data_json = response.json()
+products_list = response.content
 
-print(data_json)
+print(type(products_list))
